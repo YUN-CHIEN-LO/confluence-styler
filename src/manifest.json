@@ -1,6 +1,6 @@
 {
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
+  "name": "LYC Confluence Styles",
+  "description": "Custom Confluence Styles for Syntec",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
