@@ -1,0 +1,27 @@
+{
+  "name": "confluence-styler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/script/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -r dist",
+    "style": "sass --no-source-map --style=compressed src/styles:dist/styles",
+    "prepare": "rollup -c & npm run style",
+    "build": "npm run clean & npm run prepare"
+  },
+  "author": "Chien Lo",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.3",
+    "@types/node": "^20.8.2",
+    "chrome-types": "^0.1.231",
+    "i": "^0.3.7",
+    "npm": "^10.2.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-dts": "^6.0.2",
+    "rollup-plugin-ts": "^3.4.5",
+    "sass": "^1.68.0",
+    "typescript": "^5.2.2"
+  }
+}
