@@ -1,3 +1,4 @@
+@import "./var.scss";
 @import "./mixins.scss";
 
 // 檢視文件
@@ -77,5 +78,48 @@
         text-overflow: ellipsis;
       }
     }
+  }
+}
+
+.lyc-cf-tooltip {
+  position: fixed;
+  z-index: 1000;
+  padding: 5px 10px;
+  color: #fff;
+  background-color: $color-tooltip;
+  border-radius: 4px;
+  @include setFontSizeBase();
+  min-height: 38px;
+  padding: 5px 8px;
+  box-sizing: border-box;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  &:before {
+    content: "";
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid $color-tooltip;
+  }
+
+  &__refresh {
+    position: absolute;
+    background-color: $color-tooltip;
+    z-index: 1000;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 0px;
+    left: 0px;
+    bottom: 50vh;
+    width: 10px;
+    height: 36px;
   }
 }
