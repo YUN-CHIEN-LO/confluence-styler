@@ -1,0 +1,33 @@
+@import "./mixins.scss";
+
+* {
+  @include setFontFamily();
+}
+
+// 主面板
+#main.aui-page-panel-content {
+  // 置頂小標
+  .list-container > .group-wrapper > h6.sticky-header {
+    @include setFontSizeBase();
+  }
+  // 文件標題
+  span.item-title {
+    @include setFontSizeBase();
+  }
+}
+
+.aui-sidebar-body {
+  & > .aui-navgroup > .aui-navgroup-inner > .aui-sidebar-group {
+    & > .backbone-view,
+    & > .aui-navgroup-inner {
+      & > .aui-nav-heading {
+        @include setFontSizeBaseSubTitle();
+        margin-bottom: 5px;
+      }
+      & ul.aui-nav.nav-items > li {
+        @include setFontSizeBase();
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

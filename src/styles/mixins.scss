@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@300;400;600&display=swap");
+
+@import "./var.scss";
+
+@mixin setFontFamily() {
+  font-family: "Noto Sans TC", sans-serif !important;
+  font-family: "Rubik", sans-serif !important;
+}
+
+@mixin setFontSizeBase() {
+  font-size: $fz-base;
+  line-height: $base-line-height;
+}
+
+@mixin setFontSizeBaseSubTitle() {
+  font-size: $fz-sub-title;
+  line-height: $base-line-height;
+}

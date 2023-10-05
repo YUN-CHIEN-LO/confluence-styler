@@ -1,0 +1,81 @@
+@import "./mixins.scss";
+
+// 檢視文件
+#content.page.view {
+  @include setFontSizeBase();
+}
+
+// 側邊欄
+.acs-side-bar {
+  @include setFontSizeBase();
+
+  // 空間名稱
+  .space-information-container {
+    & > .name {
+      padding-right: 18px;
+      & > a {
+        font-size: 24px;
+      }
+    }
+    & .favourite-space-icon > .space-favourite {
+      transform: scale(1.5);
+      right: 20px;
+    }
+  }
+
+  // 分類小標
+  .ia-quick-links-header-title,
+  .ia-secondary-header-title {
+    @include setFontSizeBaseSubTitle();
+  }
+
+  // 超連結連結
+  .acs-nav-sections {
+    .acs-nav-list > .acs-nav-item {
+      margin-bottom: 5px;
+      & .acs-nav-item-link {
+        min-height: 38px;
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        & > span.icon {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  // 側邊欄 page tree
+  ul.plugin_pagetree_children_list > li {
+    position: relative;
+    margin-left: 5px;
+    // 前綴圖示
+    & .plugin_pagetree_childtoggle_container {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      & > .no-children.icon,
+      & > a.aui-icon {
+        position: absolute;
+        transform: translate(-50%, -50%) scale(1.2);
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        &::before {
+          margin: 0;
+        }
+      }
+    }
+    // 頁面名稱
+    & .plugin_pagetree_children_span {
+      margin-left: 28px;
+      & > a {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

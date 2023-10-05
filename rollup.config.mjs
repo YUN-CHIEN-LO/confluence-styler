@@ -6,7 +6,7 @@ export default {
   input: "src/script/index.ts",
   output: [
     {
-      dir: "./dist/script",
+      dir: "./dist/scripts",
       format: "cjs",
     },
   ],
