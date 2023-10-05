@@ -10,6 +10,7 @@
   "content_scripts": [
     {
       "css": ["styles/page.css"],
+      "js": ["scripts/page.js"],
       "matches": [
         "https://confluence.syntecclub.com/display/*",
         "https://confluence.syntecclub.com/pages/*"
