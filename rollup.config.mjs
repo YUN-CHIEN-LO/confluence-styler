@@ -24,7 +24,7 @@ export default [
     ],
   },
   {
-    input: "src/script/page.ts",
+    input: "src/script/pages/cf-page.ts",
     output: [
       {
         dir: "./dist/scripts",

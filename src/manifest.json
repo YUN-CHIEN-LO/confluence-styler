@@ -9,8 +9,8 @@
   },
   "content_scripts": [
     {
-      "css": ["styles/page.css"],
-      "js": ["scripts/page.js"],
+      "css": ["styles/cf-page.css"],
+      "js": ["scripts/cf-page.js"],
       "matches": [
         "https://confluence.syntecclub.com/display/*",
         "https://confluence.syntecclub.com/pages/*"
