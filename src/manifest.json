@@ -19,6 +19,10 @@
     {
       "css": ["styles/index.css"],
       "matches": ["https://confluence.syntecclub.com/*"]
+    },
+    {
+      "css": ["styles/jr-dashboard.css"],
+      "matches": ["https://jira.syntecclub.com/secure/Dashboard.jspa"]
     }
   ]
 }

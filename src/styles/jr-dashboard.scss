@@ -1,0 +1,15 @@
+@import "./global/_var.scss";
+@import "./global/_mixins.scss";
+
+div,
+span {
+  @include setFontSizeBase();
+}
+
+// Dashboard 標題
+.dashboard-item-header {
+  & > h2 {
+    font-size: $fz-base !important;
+    font-weight: normal !important;
+  }
+}
