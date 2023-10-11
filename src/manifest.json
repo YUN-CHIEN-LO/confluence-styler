@@ -9,20 +9,30 @@
   },
   "content_scripts": [
     {
+      "css": ["styles/cf-dashboard.css"],
+      "matches": ["https://confluence.syntecclub.com/*"]
+    },
+    {
       "css": ["styles/cf-page.css"],
       "js": ["scripts/cf-page.js"],
       "matches": [
         "https://confluence.syntecclub.com/display/*",
-        "https://confluence.syntecclub.com/pages/*"
+        "https://confluence.syntecclub.com/pages/viewpage.action?*"
       ]
-    },
-    {
-      "css": ["styles/index.css"],
-      "matches": ["https://confluence.syntecclub.com/*"]
     },
     {
       "css": ["styles/jr-dashboard.css"],
       "matches": ["https://jira.syntecclub.com/secure/Dashboard.jspa"]
+    },
+    {
+      "css": ["styles/jr-browse.css"],
+      "matches": ["https://jira.syntecclub.com/browse/*"]
+    },
+    {
+      "js": ["scripts/cf-editor.js"],
+      "matches": [
+        "https://confluence.syntecclub.com/pages/resumedraft.action?*"
+      ]
     }
   ]
 }

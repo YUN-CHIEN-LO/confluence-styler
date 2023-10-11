@@ -1,0 +1,18 @@
+{
+    "files.eol": "\n",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontSize": 16,
+    "editor.formatOnSave": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

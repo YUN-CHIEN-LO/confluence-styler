@@ -24,7 +24,17 @@ export default [
     ],
   },
   {
-    input: "src/script/pages/cf-page.ts",
+    input: "src/script/cf-page.ts",
+    output: [
+      {
+        dir: "./dist/scripts",
+        format: "cjs",
+      },
+    ],
+    plugins: [typescript(), terser()],
+  },
+  {
+    input: "src/script/cf-editor.ts",
     output: [
       {
         dir: "./dist/scripts",

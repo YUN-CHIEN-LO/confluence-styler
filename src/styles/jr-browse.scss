@@ -1,0 +1,24 @@
+@import "./global/mixins";
+
+.toggle-wrap {
+  * {
+    @include setFontFamily();
+  }
+}
+
+#edit-issue-dialog.aui-dialog2 {
+  * {
+    @include setFontFamily();
+  }
+  //   &.is-maximized {
+  width: 100vw !important;
+  top: 0px;
+  & > .aui-dialog2-content {
+    max-height: calc(100vh - 114px);
+  }
+  //   }
+}
+
+.dropdown-text {
+  line-height: 1;
+}
