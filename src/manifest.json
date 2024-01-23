@@ -31,7 +31,8 @@
     {
       "js": ["scripts/cf-editor.js"],
       "matches": [
-        "https://confluence.syntecclub.com/pages/resumedraft.action?*"
+        "https://confluence.syntecclub.com/pages/resumedraft.action?*",
+        "https://confluence.syntecclub.com/pages/editpage.action?*"
       ]
     }
   ]

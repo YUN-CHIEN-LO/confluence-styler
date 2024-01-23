@@ -1,5 +1,4 @@
 function addStyle(style: string) {
-  alert("add");
   const cssStyle = document.createElement("style");
   cssStyle.textContent = style;
 
@@ -8,7 +7,6 @@ function addStyle(style: string) {
   ) as HTMLIFrameElement;
 
   if (!!iframe && !!iframe.contentWindow) {
-    alert("frame");
     iframe.contentWindow.document.head.appendChild(cssStyle);
   }
 }
@@ -45,5 +43,8 @@ const styleText = `
     }
     `;
 
-alert("load");
-addStyle(styleText);
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    addStyle(styleText);
+  }, 3000);
+});

@@ -108,3 +108,68 @@ function initTooltip(time: number = 100) {
 const tooltipDom = createTooltip();
 // 初始 tooltip
 initTooltip(1000);
+
+function openView(tableDom: Node) {
+  const pageDom = document.getElementById("page");
+  pageDom && pageDom.classList.add("is-no-scroll");
+
+  const viewDialog = document.getElementById("lyc-cf-table-view-dialog");
+  if (!viewDialog) return;
+  viewDialog.classList.add("lyc-cf-table__view-dialog--open");
+
+  const viewContent = document.getElementById(
+    "lyc-cf-table-view-dialog-content"
+  );
+  if (!viewContent) return;
+  const oldTableDom = viewContent.querySelector(".confluenceTable");
+  if (oldTableDom) {
+    viewContent.removeChild(oldTableDom);
+  }
+
+  const copyTableDom = tableDom.cloneNode(true);
+  viewContent.appendChild(copyTableDom);
+}
+
+async function initViewTable(time: number = 100) {
+  await setTimeoutTimer(time);
+  const confluenceTableList = document.querySelectorAll(
+    ".confluenceTable"
+  ) as NodeListOf<Element>;
+
+  const pageDom = document.getElementById("page");
+
+  // 建立刷新按鈕
+  const newViewDialog = document.createElement("div");
+  newViewDialog.setAttribute("id", "lyc-cf-table-view-dialog");
+  newViewDialog.className = "lyc-cf-table__view-dialog";
+
+  // 建立刷新按鈕
+  const newCloseBtn = document.createElement("div");
+  newCloseBtn.className = "lyc-cf-table__close-btn";
+  newCloseBtn.onclick = (event) => {
+    event.stopPropagation();
+    newViewDialog.classList.remove("lyc-cf-table__view-dialog--open");
+
+    pageDom && pageDom.classList.remove("is-no-scroll");
+  };
+
+  const newContent = document.createElement("div");
+  newContent.setAttribute("id", "lyc-cf-table-view-dialog-content");
+  newViewDialog.appendChild(newCloseBtn);
+  newViewDialog.appendChild(newContent);
+
+  pageDom && pageDom.appendChild(newViewDialog);
+
+  confluenceTableList.forEach((tableDom) => {
+    // 建立刷新按鈕
+    const newViewBtn = document.createElement("div");
+    newViewBtn.className = "lyc-cf-table__view-btn";
+    newViewBtn.onclick = (event) => {
+      event.stopPropagation();
+      openView(tableDom);
+    };
+    tableDom.appendChild(newViewBtn);
+  });
+}
+
+initViewTable(1000);

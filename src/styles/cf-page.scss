@@ -155,3 +155,66 @@
     height: 36px;
   }
 }
+
+.confluenceTable {
+  position: relative;
+  background-color: #fff;
+}
+.lyc-cf-table__view-btn {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(163, 163, 163, 0.1);
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+  &::after {
+    content: "V";
+  }
+}
+
+.lyc-cf-table__close-btn {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 16px;
+  left: 16px;
+  background-color: #fff;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::after {
+    content: "X";
+  }
+}
+
+.lyc-cf-table__view-dialog {
+  top: 0px;
+  left: 0px;
+  width: calc(100vw - 16px) !important;
+  height: calc(100vh - 16px) !important;
+  background-color: rgba(#000, 0.5);
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 50px;
+  position: fixed;
+  z-index: 2000;
+  display: none;
+  &--open {
+    display: block;
+    font-size: 16px;
+    & .lyc-cf-table__view-btn {
+      display: none;
+    }
+  }
+}
+
+#page.is-no-scroll {
+  // overflow: hidden;
+  // border: solid 1px red !important;
+}
