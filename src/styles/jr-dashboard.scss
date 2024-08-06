@@ -13,3 +13,15 @@ span {
     font-weight: normal !important;
   }
 }
+
+.layout.column {
+  width: 25%;
+  &.second {
+    width: 50%;
+  }
+}
+
+#gadget-30716-renderbox {
+  left: 25%;
+  width: 50%;
+}

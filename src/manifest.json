@@ -22,6 +22,7 @@
     },
     {
       "css": ["styles/jr-dashboard.css"],
+      "js": ["scripts/jr-dashboard.js"],
       "matches": ["https://jira.syntecclub.com/secure/Dashboard.jspa"]
     },
     {

@@ -211,10 +211,12 @@
     & .lyc-cf-table__view-btn {
       display: none;
     }
+    & .confluenceTable {
+      & ul.inline-task-list > li {
+        background-repeat: no-repeat;
+        padding-left: 20px;
+        background-position-y: 3px;
+      }
+    }
   }
-}
-
-#page.is-no-scroll {
-  // overflow: hidden;
-  // border: solid 1px red !important;
 }

@@ -43,4 +43,14 @@ export default [
     ],
     plugins: [typescript(), terser()],
   },
+  {
+    input: "src/script/jr-dashboard.ts",
+    output: [
+      {
+        dir: "./dist/scripts",
+        format: "cjs",
+      },
+    ],
+    plugins: [typescript(), terser()],
+  },
 ];
